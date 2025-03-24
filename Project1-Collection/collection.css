@@ -1,0 +1,202 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 10px;
+    background-image: url("Background3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.collection {
+    display: grid;
+    grid-template-rows: 100px 100px;
+
+}
+.top-section h1 {
+    font-size: 40px;
+    color: white;
+}
+.top-section p {
+    font-size: 29px;
+    color: white;
+}
+.collection-cards-parent {
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+
+}
+.collection-cards-parent .recipe-card:nth-child(n+10) {
+    align-self: center;
+    justify-self: center;
+    grid-row: 2;
+/*This needs fixing*/
+}
+.recipe-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 0fr 2fr 0fr;
+    gap: 5px;
+    width: 100%;
+    background: white;
+    padding: 5px;
+}
+.delete-button {
+    position: absolute; 
+    top: 10px;
+    right: 10px; 
+    font-size: 10px;
+    padding: 2.5px 5px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 1px 1px rgb(0,0,0);
+}
+.delete-button:hover {
+    background-image: linear-gradient(
+#ff512f, #f09819);
+    transition: 0.7s;
+}
+
+.picture {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.name {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+.info-section {
+    background-image: linear-gradient(
+#ff512f, #f09819);
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.info-section p {
+    justify-self: start; 
+}
+
+.info-section p:last-child {
+    justify-self: end; 
+}
+
+.content-section {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.ingredients-section {
+  padding: 10px;
+  color: #4F517D;
+}
+.directions-section {
+  color: #FF6347; 
+  padding: 10px;
+}
+
+.ingredients-section h3,
+.directions-section h3 {
+    text-align: center;
+}
+
+
+.nutrition-section {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+   font-size: 12px;
+    background-image: linear-gradient(
+#ff512f, #f09819);
+}
+
+
+
+@media (max-width: 479px) {
+    .top-section h1 {
+        font-size: 20px;
+    }
+    .top-section p {
+        font-size: 15px;
+    }
+    .collection-cards-parent {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr; 
+    }
+    .recipe-card {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 480px) and (max-width: 1023px) {
+    .top-section h1 {
+        font-size: 30px;
+        
+    }
+    .top-section p {
+        font-size: 17px;
+        
+    }
+    .collection-cards-parent {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recipe-card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .collection-cards-parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+    
