@@ -13,38 +13,69 @@ body {
     min-height: 100vh;
     background-color: #f4f4f4;
     padding: 10px;
-    background-image: url("Background3.jpg");
+    background-image: url("assets/background6.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+}
+
+label {
+    color: black;
+    background-image: linear-gradient(
+#ff512f, #f09819);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid black;
+    backdrop-filter: blur(5px);
 }
 
 .collection {
     display: grid;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: auto auto;
+}
 
+.top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    width: fit-content;
 }
+
 .top-section h1 {
-    font-size: 40px;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
     color: white;
 }
+
 .top-section p {
-    font-size: 29px;
-    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    line-height: 1.5;
 }
+
+.top-section h1,
+.top-section p {
+    text-shadow: 0 8px 16px rgba(0, 0, 3, 1);
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .collection-cards-parent {
     display: grid;
-    grid-row: 2;
+    align-items: stretch;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 10px;
 
 }
-.collection-cards-parent .recipe-card:nth-child(n+10) {
-    align-self: center;
-    justify-self: center;
-    grid-row: 2;
-/*This needs fixing*/
-}
+
 .recipe-card {
     position: relative;
     display: grid;
@@ -52,6 +83,7 @@ body {
     grid-template-rows: 1fr 0fr 2fr 0fr;
     gap: 5px;
     width: 100%;
+    height: 100%;
     background: white;
     padding: 5px;
 }
