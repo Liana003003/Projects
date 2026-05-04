@@ -47,6 +47,25 @@ This project strengthened my understanding of DOM manipulation, event handling, 
 
 ---
 
+### The Whack-a-Mole
+
+A fun and interactive browser game where the player must click on moles as they appear to score points before time runs out.
+
+**Key features:**
+- Random mole appearance using JavaScript timing functions
+- Score tracking with real-time updates
+- Countdown timer to limit gameplay duration
+- Event-driven interactions (click detection on moles)
+- Dynamic DOM manipulation for game state changes
+- Simple animations and visual feedback using CSS
+
+This project helped me practice working with timers, game loops, and user interaction, while reinforcing my understanding of JavaScript events and dynamic styling.
+
+#### Screenshot
+
+![Whack-a-Mole Screenshot](./Project3-Whack_a_Mole/Screenshot.png)
+
+---
 ## Technologies Used
 
 - HTML5  
