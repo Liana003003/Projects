@@ -1,27 +1,27 @@
 
   body {
-    padding: 0;
-    margin: 0;
-    background-image: url('background.png');
-    display: flex;
-    justify-content: center;
-   align-items: center;
-    height: 100vh;
+  padding: 10px;
+  margin: 0;
+  background-image: url('background.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
   .container {
-    padding: 50px;
-    background-image: url('background1.jpg');
-    width: 100%;
-    max-width: 50%;
-    box-shadow: 15px 15px 15px 15px black;
-  }
+  padding: 40px;
+  background-image: url('background1.jpg');
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 5px 5px 10px black;
+}
 
   h1 {
     color: white;
     text-align: center;
     padding-bottom: 20px;
-    font-size: 50px;
+    font-size: clamp(28px, 5vw, 50px);
     font-weight: bold;
   }
 
@@ -31,13 +31,14 @@
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(1, 1, 1, 1);
     display: flex;
-    gap: 25px;
+    gap: 15px;
+    flex-wrap: wrap;
     margin-bottom: 30px; 
   }
 
   #enterTask {
     flex: 1;
-    font-size: 25px;
+    font-size: clamp(16px, 3vw, 25px);
     border: 2px solid #93d3f3;
     padding: 10px;
     color: black;
@@ -57,9 +58,14 @@
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(1, 1, 1, 1);
-    margin-top: 30px; 
-  
+    margin-top: 30px;
   }
+
+  .list-tasks ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: inside; /* optional */
+}
 
   li {
     display: flex;
@@ -79,20 +85,46 @@
   li span {
     flex-grow: 1;
     text-align: left;
-    font-size: 25px;
+    font-size: clamp(16px, 3vw, 25px);
   }
 
   .delete-button {
     margin-left: 10px;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     background-image: url('background1.jpg');
     color: white;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    flex-shrink: 0;
   }
   
   .completed {
     text-decoration: line-through;
     color: gray;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .new-task {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #addTask {
+    width: 100%;
+  }
+
+  li {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .delete-button {
+    width: 15%;
+  }
 }
